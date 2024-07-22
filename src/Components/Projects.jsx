@@ -5,7 +5,7 @@ const StyledPrj = styled.section`
   display: grid;
   grid-template-columns: auto auto auto;
   gap: 1.5rem;
-  margin: 1rem;
+  margin: 1rem 4rem;
 `;
 
 function Projects() {

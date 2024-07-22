@@ -9,52 +9,57 @@ import Icon from "./Icon";
 
 const StyledContact = styled.section`
   background: #fff;
-  padding: 1.5rem;
-  border-radius: 0.75rem;
-  box-shadow: 3px 3px 3px #ccc, -3px -3px 3px #ccc;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 1rem;
-  height: fit-content;
+  max-width: 600px;
 `;
+
 const H3 = styled.h3`
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 18px;
-  color: rgb(172, 170, 177);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #333;
   text-transform: uppercase;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 `;
+
 const P = styled.p`
   font-weight: 400;
-  font-size: 15px;
-  color: rgb(109, 107, 119);
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
   span {
     font-weight: 600;
-    margin-right: 0.2rem;
+    margin-right: 0.5rem;
   }
 `;
+
 const S = styled.span`
   font-weight: 400;
-  font-size: 15px;
-  line-height: 18px;
-  color: rgb(109, 107, 119);
+  font-size: 16px;
+  line-height: 22px;
+  color: #555;
   text-transform: capitalize;
 `;
+
 const Identifier = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 0.5rem;
 `;
+
 const Row = styled.div`
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  gap: 1.5rem;
+  gap: 1rem;
 `;
+
 const Box = styled.div`
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 1fr 1fr;
   gap: 1rem;
 `;
 
@@ -64,10 +69,10 @@ function ContactBox() {
       <div>
         <H3>For Job Hiring or Project</H3>
         <P>
-          <span>Note: </span>If you want to hire me for some post in your
-          company or just for some project,please Fill Up the contact form in
-          contact tab. Our Company Manager will guide you for further
-          instructions
+          <span>Note:</span>
+          If you want to hire me for some post in your company or just for some
+          project, please fill up the contact form in the contact tab. Our
+          company manager will guide you for further instructions.
         </P>
       </div>
       <div>
@@ -76,29 +81,28 @@ function ContactBox() {
           <Row>
             <Identifier>
               <Icon icon={<IconMail stroke={2} />} />
-              <S>email: </S>
+              <S>Email:</S>
             </Identifier>
             <S>yeah@example.com</S>
           </Row>
           <Row>
             <Identifier>
               <Icon icon={<IconBrandSkype stroke={2} />} />
-
-              <S>skype: </S>
+              <S>Skype:</S>
             </Identifier>
-            <S>john.dow</S>
+            <S>john.doe</S>
           </Row>
           <Row>
             <Identifier>
               <Icon icon={<IconBrandLinkedin stroke={2} />} />
-              <S>linkedIn: </S>
+              <S>LinkedIn:</S>
             </Identifier>
             <S>John Doe</S>
           </Row>
           <Row>
             <Identifier>
               <Icon icon={<IconBrandGithub stroke={2} />} />
-              <S>github: </S>
+              <S>GitHub:</S>
             </Identifier>
             <S>John Doe</S>
           </Row>

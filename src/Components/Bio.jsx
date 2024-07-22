@@ -2,53 +2,65 @@ import styled from "styled-components";
 
 const StyledBio = styled.div`
   background-color: #fff;
-  box-shadow: 3px 3px 3px #ccc, -3px -3px 3px #ccc;
-  padding: 1.5rem;
-  border-radius: 0.75rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  border-radius: 1rem;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 1rem;
   margin: 1rem;
+  max-width: 600px;
+  border: 1px solid #e0e0e0;
 `;
+
 const H3 = styled.h3`
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 21px;
-  color: rgb(172, 170, 177);
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 26px;
+  color: #333;
   text-transform: uppercase;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 `;
+
 const H6 = styled.h6`
   font-weight: 500;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 18px;
-  color: rgb(172, 170, 177);
+  color: #666;
   text-transform: uppercase;
-  margin: 0.5rem 0rem;
+  margin: 1rem 0 0.5rem;
 `;
+
 const P = styled.p`
   font-weight: 400;
-  font-size: 15px;
-  color: rgb(109, 107, 119);
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
 `;
+
 const Skills = styled.div`
   display: flex;
-  align-items: center;
-  gap: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
 `;
+
 const Skill = styled.span`
-  background-color: rgb(172, 170, 177);
-  padding: 0.7rem;
-  color: rgba(0, 0, 0, 0.6);
-  border-radius: 45%;
+  background-color: #ececec;
+  padding: 0.5rem 1rem;
+  color: #333;
+  border-radius: 0.5rem;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 `;
 
 function Bio() {
   return (
     <StyledBio>
-      <H3>bio</H3>
+      <H3>Bio</H3>
       <P>
-        description of max 150-200 words Lorem ipsum dolor sit amet consectetur,
+        Description of max 150-200 words Lorem ipsum dolor sit amet consectetur,
         adipisicing elit. Molestias, doloremque? Quae magnam dolore similique
         nesciunt nisi? Aliquid, dolores excepturi voluptate quis eveniet
         consequatur dolorem culpa temporibus repudiandae obcaecati et iure?
@@ -70,7 +82,7 @@ function Bio() {
         <Skill>React JS</Skill>
         <Skill>Figma</Skill>
         <Skill>Node JS</Skill>
-        <Skill>NOSQL Database</Skill>
+        <Skill>NoSQL Database</Skill>
         <Skill>Designing</Skill>
         <Skill>Javascript</Skill>
       </Skills>

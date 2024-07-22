@@ -6,6 +6,7 @@ const Sect = styled.section`
   grid-template-columns: auto auto auto;
   gap: 1.5rem;
   place-items: center;
+  margin: 1rem 5rem;
 `;
 
 function Certifications() {

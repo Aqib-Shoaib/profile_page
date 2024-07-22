@@ -6,26 +6,30 @@ const StyledBox = styled.section`
   background: #fff;
   padding: 1.5rem;
   border-radius: 0.75rem;
-  box-shadow: 3px 3px 3px #ccc, -3px -3px 3px #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 1rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  height: fit-content;
 `;
+
 const Identifier = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 0.5rem;
 `;
+
 const Row = styled.div`
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  gap: 1.5rem;
-  padding: 0rem 1rem;
+  gap: 1rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e0e0e0;
+  &:last-child {
+    border-bottom: none;
+  }
 `;
+
 const S = styled.p`
   font-weight: 400;
   font-size: 15px;
@@ -33,6 +37,7 @@ const S = styled.p`
   color: rgb(109, 107, 119);
   text-transform: capitalize;
 `;
+
 const H3 = styled.h3`
   font-weight: 500;
   font-size: 18px;
@@ -41,10 +46,11 @@ const H3 = styled.h3`
   text-transform: uppercase;
   margin-bottom: 1rem;
 `;
+
 const Exp = styled.div`
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
 `;
 
 function ExperienceBox() {
@@ -62,59 +68,32 @@ function ExperienceBox() {
         <Row>
           <Identifier>
             <Icon icon={<IconKeyframes stroke={2} />} />
-            <S>Designing</S>
+            <S>Development</S>
           </Identifier>
-          <S>3 years</S>
+          <S>4 years</S>
         </Row>
         <Row>
           <Identifier>
             <Icon icon={<IconKeyframes stroke={2} />} />
-            <S>Designing</S>
+            <S>Project Management</S>
           </Identifier>
-          <S>3 years</S>
+          <S>2 years</S>
         </Row>
         <Row>
           <Identifier>
             <Icon icon={<IconKeyframes stroke={2} />} />
-            <S>Designing</S>
+            <S>Testing</S>
           </Identifier>
-          <S>3 years</S>
+          <S>1 year</S>
         </Row>
         <Row>
           <Identifier>
             <Icon icon={<IconKeyframes stroke={2} />} />
-            <S>Designing</S>
+            <S>Deploying</S>
           </Identifier>
-          <S>3 years</S>
+          <S>1.5 year</S>
         </Row>
-        <Row>
-          <Identifier>
-            <Icon icon={<IconKeyframes stroke={2} />} />
-            <S>Designing</S>
-          </Identifier>
-          <S>3 years</S>
-        </Row>
-        <Row>
-          <Identifier>
-            <Icon icon={<IconKeyframes stroke={2} />} />
-            <S>Designing</S>
-          </Identifier>
-          <S>3 years</S>
-        </Row>
-        <Row>
-          <Identifier>
-            <Icon icon={<IconKeyframes stroke={2} />} />
-            <S>Designing</S>
-          </Identifier>
-          <S>3 years</S>
-        </Row>
-        <Row>
-          <Identifier>
-            <Icon icon={<IconKeyframes stroke={2} />} />
-            <S>Designing</S>
-          </Identifier>
-          <S>3 years</S>
-        </Row>
+        {/* Add more rows as needed */}
       </Exp>
     </StyledBox>
   );

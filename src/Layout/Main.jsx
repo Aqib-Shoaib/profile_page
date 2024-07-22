@@ -1,4 +1,3 @@
-import OverviewRow from "../Components/OverviewRow";
 import ProfileBanner from "../Components/ProfileBanner";
 import styled from "styled-components";
 import Tab from "../Components/Tab";
@@ -11,7 +10,6 @@ function Main() {
   return (
     <StyledMain>
       <ProfileBanner />
-      <OverviewRow />
       <Tab />
     </StyledMain>
   );

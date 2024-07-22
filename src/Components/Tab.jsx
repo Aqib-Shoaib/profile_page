@@ -52,7 +52,7 @@ const Nav = styled.nav`
   }
 `;
 const Tabs = styled.section`
-  padding: 1rem 10rem;
+  padding: 1rem 2rem;
 `;
 
 function Tab() {

@@ -3,45 +3,60 @@ import { IconDotsVertical, IconMessage } from "@tabler/icons-react";
 import { useState } from "react";
 import styled from "styled-components";
 import ProgressBar from "./ProgressBar";
-
 const StyledPrj = styled.article`
-  width: 331px;
+  width: 350px;
   height: 420px;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2), -2px -2px 2px rgba(0, 0, 0, 0.2);
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  &:hover h3 {
+    color: rgb(0, 0, 180);
+  }
 `;
+
 const ImgLabel = styled.img`
-  width: 45px;
-  height: 45px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
 `;
+
 const MemberImg = styled.img`
-  height: 28px;
+  height: 30px;
   width: 30px;
   border-radius: 50%;
 `;
+
 const H3 = styled.h3`
-  font-weight: 500;
-  font-size: 18px;
+  font-weight: 600;
+  font-size: 20px;
   line-height: 28px;
-  color: rgba(0, 0, 0, 0.8);
+  color: #2c3e50;
   &:hover {
-    color: rgb(104, 93, 216);
+    color: #3498db;
   }
 `;
+
 const Client = styled.span`
-  color: rgb(109, 107, 119);
-  font-size: 15px;
-  line-height: 21px;
+  color: #95a5a6;
+  font-size: 14px;
+  line-height: 20px;
   font-weight: 500;
 `;
+
 const Cl = styled.span`
-  color: rgb(109, 107, 119);
-  font-size: 15px;
-  line-height: 21px;
+  color: #95a5a6;
+  font-size: 14px;
+  line-height: 20px;
   font-weight: 400;
 `;
+
 const DivHeader = styled.div`
   display: flex;
   align-items: center;
@@ -49,8 +64,9 @@ const DivHeader = styled.div`
   gap: 0.5rem;
   padding: 1rem;
 `;
+
 const MenuBtn = styled.span`
-  color: rgb(109, 107, 110);
+  color: #7f8c8d;
   cursor: pointer;
   padding: 0.5rem;
   border-radius: 50%;
@@ -59,56 +75,61 @@ const MenuBtn = styled.span`
   justify-content: center;
 
   &:hover {
-    background: rgba(109, 107, 110, 0.2);
+    background: rgba(127, 140, 141, 0.2);
   }
 `;
+
 const Menu = styled.div`
   position: relative;
 `;
+
 const Opts = styled.div`
   transition: all 0.4s linear;
   display: flex;
   flex-direction: column;
   padding: 0.75rem;
-  border-radius: 0.2rem;
-  background: #fff;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1), -1px -1px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   position: absolute;
   right: 1.5rem;
   top: 1.5rem;
-  width: 15rem;
+  width: 200px;
 
   .btn {
     background: transparent;
     border: none;
     width: 100%;
-
-    color: rgb(68, 64, 80);
+    color: #34495e;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 20px;
-    padding: 0.5rem;
+    padding: 0.75rem;
     border-radius: 5px;
   }
+
   .btn:hover {
-    background-color: rgba(68, 64, 80, 0.2);
+    background-color: rgba(52, 73, 94, 0.1);
   }
+
   .leave {
     border-radius: 0;
     color: red;
-    border-top: 1px solid rgba(68, 64, 80, 0.4);
+    border-top: 1px solid rgba(52, 73, 94, 0.2);
   }
 `;
+
 const Price = styled.div`
-  background: #f3f2f3;
-  padding: 0.7rem;
+  background: #ecf0f1;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-radius: 7px;
+  border-radius: 8px;
   grid-row: span 2;
 `;
+
 const Grid = styled.div`
   display: grid;
   grid-template-columns: auto auto;
@@ -116,27 +137,31 @@ const Grid = styled.div`
   padding: 1rem;
   place-items: center;
 `;
+
 const Div = styled.div`
   padding: 1rem;
   p {
-    color: rgba(68, 64, 80, 0.8);
+    color: #34495e;
     font-size: 14px;
-    line-height: 20px;
+    line-height: 22px;
   }
 `;
+
 const Line = styled.div`
-  border: 1px solid rgba(68, 64, 80, 0.1);
-  padding: 0 1rem;
+  border: 1px solid rgba(52, 73, 94, 0.1);
+  margin: 0 1rem;
 `;
+
 const DaysLeft = styled.span`
-  background: rgba(200, 0, 0, 0.3);
-  padding: 0.4rem;
+  background: rgba(231, 76, 60, 0.3);
+  padding: 0.5rem;
   color: #1f1f1f;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 20px;
   font-weight: 300;
-  border-radius: 5px;
+  border-radius: 8px;
 `;
+
 const HourDiv = styled.div`
   padding: 1rem;
   display: flex;
@@ -144,47 +169,52 @@ const HourDiv = styled.div`
   justify-content: space-between;
   align-items: center;
 `;
+
 const Bar = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   padding: 1rem;
 `;
+
 const Textbar = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0rem 0.5rem;
 `;
+
 const Members = styled.div`
-  width: fit-content;
-  margin-right: 1.5rem;
   display: flex;
+  gap: 0.5rem;
 `;
+
 const FooterDiv = styled.div`
   display: flex;
-  padding: 0.5rem;
+  padding: 1rem;
   justify-content: space-between;
   align-items: center;
 `;
+
 const No = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 0.3rem;
+  gap: 0.5rem;
 `;
+
 const ImgDiv = styled.div`
-  width: 17px;
   position: relative;
   cursor: pointer;
 `;
+
 const Membername = styled.span`
   position: absolute;
   top: -25px;
-  background: #1f1f1f;
-  color: #f1f1f1;
+  background: #34495e;
+  color: #ecf0f1;
   font-size: 10px;
-  padding: 0.2rem;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
   transition: all 0.3s ease-in-out;
 `;
 
