@@ -7,14 +7,7 @@ import {
 import styled from "styled-components";
 import Icon from "./Icon";
 
-const StyledContact = styled.section`
-  background: #fff;
-  padding: 2rem;
-  border-radius: 1rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 1rem;
-  max-width: 600px;
-`;
+const StyledContact = styled.section``;
 
 const H3 = styled.h3`
   font-weight: 600;
@@ -26,23 +19,23 @@ const H3 = styled.h3`
   margin-top: 1rem;
 `;
 
-const P = styled.p`
-  font-weight: 400;
-  font-size: 16px;
-  color: #555;
-  line-height: 1.5;
-  span {
-    font-weight: 600;
-    margin-right: 0.5rem;
-  }
-`;
-
 const S = styled.span`
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
   color: #555;
   text-transform: capitalize;
+`;
+const L = styled.span`
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #555;
+  cursor: pointer;
+  text-transform: capitalize;
+  &:hover {
+    color: #0ef0ec;
+  }
 `;
 
 const Identifier = styled.div`
@@ -58,56 +51,45 @@ const Row = styled.div`
 `;
 
 const Box = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
 `;
 
 function ContactBox() {
   return (
     <StyledContact>
-      <div>
-        <H3>For Job Hiring or Project</H3>
-        <P>
-          <span>Note:</span>
-          If you want to hire me for some post in your company or just for some
-          project, please fill up the contact form in the contact tab. Our
-          company manager will guide you for further instructions.
-        </P>
-      </div>
-      <div>
-        <H3>Contact For Any Queries</H3>
-        <Box>
-          <Row>
-            <Identifier>
-              <Icon icon={<IconMail stroke={2} />} />
-              <S>Email:</S>
-            </Identifier>
-            <S>yeah@example.com</S>
-          </Row>
-          <Row>
-            <Identifier>
-              <Icon icon={<IconBrandSkype stroke={2} />} />
-              <S>Skype:</S>
-            </Identifier>
-            <S>john.doe</S>
-          </Row>
-          <Row>
-            <Identifier>
-              <Icon icon={<IconBrandLinkedin stroke={2} />} />
-              <S>LinkedIn:</S>
-            </Identifier>
-            <S>John Doe</S>
-          </Row>
-          <Row>
-            <Identifier>
-              <Icon icon={<IconBrandGithub stroke={2} />} />
-              <S>GitHub:</S>
-            </Identifier>
-            <S>John Doe</S>
-          </Row>
-        </Box>
-      </div>
+      <H3>Contacts</H3>
+      <Box>
+        <Row>
+          <Identifier>
+            <Icon color="#0ef0ec" icon={<IconMail stroke={2} />} />
+            <S>Email:</S>
+          </Identifier>
+          <L>yeah@example.com</L>
+        </Row>
+        <Row>
+          <Identifier>
+            <Icon color="#0ef0ec" icon={<IconBrandSkype stroke={2} />} />
+            <S>Skype:</S>
+          </Identifier>
+          <L>john.doe</L>
+        </Row>
+        <Row>
+          <Identifier>
+            <Icon color="#0ef0ec" icon={<IconBrandLinkedin stroke={2} />} />
+            <S>LinkedIn:</S>
+          </Identifier>
+          <L>John Doe</L>
+        </Row>
+        <Row>
+          <Identifier>
+            <Icon color="#0ef0ec" icon={<IconBrandGithub stroke={2} />} />
+            <S>GitHub:</S>
+          </Identifier>
+          <L>John Doe</L>
+        </Row>
+      </Box>
     </StyledContact>
   );
 }

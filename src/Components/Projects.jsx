@@ -3,7 +3,7 @@ import Prj from "./Prj";
 
 const StyledPrj = styled.section`
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto;
   gap: 1.5rem;
   margin: 1rem 4rem;
 `;
@@ -14,8 +14,8 @@ function Projects() {
     client: "Aqib Shoaib",
     totalPrice: "123k",
     paidPrice: "12k",
-    startDate: "12/12/12",
-    deadline: "12/12/13",
+    startDate: "Aug 24",
+    deadline: "Sep 24",
     description:
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit Reprehenderit dignissimos ad id, velit ratione molestias!",
     timeIndays: 30,

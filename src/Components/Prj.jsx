@@ -4,20 +4,32 @@ import { useState } from "react";
 import styled from "styled-components";
 import ProgressBar from "./ProgressBar";
 const StyledPrj = styled.article`
-  width: 350px;
-  height: 420px;
+  height: fit-content;
+  width: fit-content;
   background: #ffffff;
   border-radius: 12px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
   cursor: pointer;
+  animation: popupAnimation 0.5s ease-in-out;
 
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 0px 8px #441960;
   }
   &:hover h3 {
     color: rgb(0, 0, 180);
+  }
+
+  @keyframes popupAnimation {
+    from {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
   }
 `;
 
@@ -127,19 +139,18 @@ const Price = styled.div`
   align-items: center;
   justify-content: center;
   border-radius: 8px;
-  grid-row: span 2;
 `;
 
 const Grid = styled.div`
   display: grid;
   grid-template-columns: auto auto;
   justify-content: space-between;
-  padding: 1rem;
   place-items: center;
+  margin: 0rem 1rem;
 `;
 
 const Div = styled.div`
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   p {
     color: #34495e;
     font-size: 14px;
@@ -163,7 +174,7 @@ const DaysLeft = styled.span`
 `;
 
 const HourDiv = styled.div`
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -174,7 +185,7 @@ const Bar = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
 `;
 
 const Textbar = styled.div`
@@ -187,6 +198,7 @@ const Textbar = styled.div`
 const Members = styled.div`
   display: flex;
   gap: 0.5rem;
+  margin-right: 2rem;
 `;
 
 const FooterDiv = styled.div`
@@ -203,6 +215,8 @@ const No = styled.div`
 `;
 
 const ImgDiv = styled.div`
+  width: 15px;
+
   position: relative;
   cursor: pointer;
 `;
@@ -256,10 +270,10 @@ function Prj({ data }) {
           <Cl>
             ${data.paidPrice} / ${data.totalPrice}
           </Cl>
-          <Cl>Total Price</Cl>
         </Price>
-        <Cl>Start Date: {data.startDate}</Cl>
-        <Cl>Deadline: {data.deadline}</Cl>
+        <Cl>
+          {data.startDate}-- {data.deadline}
+        </Cl>
       </Grid>
 
       {/* description div */}
